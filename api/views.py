@@ -19,7 +19,7 @@ def health_check(request):
 @api_view(['GET'])
 def get_users_list(request):
     user = UserProfile.objects.all()
-    serializer = UserProfileSerializer(user, many=False)
+    serializer = UserProfileSerializer(user, many=True)
     return Response(serializer.data)
 
 

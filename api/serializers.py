@@ -10,7 +10,7 @@ class UserSerializer(serializers.ModelSerializer):
 
 
 class UserProfileSerializer(serializers.ModelSerializer):
-    user = UserSerializer(many=False)
+    user = UserSerializer(many=False, read_only=True)
 
     class Meta:
         model = UserProfile
